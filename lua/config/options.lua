@@ -12,11 +12,14 @@ vim.opt.smartcase = true
 
 -- Filetypes and indentation
 vim.opt.breakindent = true
+vim.opt.expandtab = true
 vim.opt.filetype = "on"
 vim.opt.linebreak = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
 
 -- Splitting
 vim.opt.splitbelow = true
