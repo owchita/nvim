@@ -6,14 +6,6 @@ return {
         config = true
     },
 
-    { -- Colorscheme
-        "vague-theme/vague.nvim",
-
-        config = function()
-            vim.cmd.colorscheme "vague"
-        end
-    },
-
     { -- Comment
         "numtostr/comment.nvim",
     },
@@ -56,6 +48,18 @@ return {
             vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+        end
+    },
+
+    { -- Tokyo Night
+        "folke/tokyonight.nvim",
+
+        lazy = false,
+        priority = 1000,
+        opts = {},
+
+        config = function()
+            vim.cmd.colorscheme "tokyonight-night"
         end
     },
 
