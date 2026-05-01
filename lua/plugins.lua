@@ -6,13 +6,6 @@ return {
         end
     },
 
-    { -- Hardtime
-        "m4xshen/hardtime.nvim",
-        lazy = false,
-        dependencies = { "MunifTanjim/nui.nvim" },
-        opts = {},
-    },
-
     { -- Highlight colors
         "brenoprata10/nvim-highlight-colors",
         config = function()
@@ -52,9 +45,23 @@ return {
     { -- Treesitter
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
+
+        config = function()
+            require ("nvim-treesitter").setup {
+                install_dir = vim.fn.stdpath('data') .. '/site'
+            }
+            require('nvim-treesitter').install { "c", "bash", "lua", "nix", "vim", "vimdoc", "python" }
+
+            -- Syntax highlighting
+            vim.api.nvim_create_autocmd('FileType', {
+                pattern = { "c", "bash", "nix", "py", "lua" },
+                callback = function() vim.treesitter.start() end,
+            })
+        end
     },
 
     { -- Zen Mode
         "folke/zen-mode.nvim",
+        vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
     },
 }
