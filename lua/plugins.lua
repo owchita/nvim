@@ -1,4 +1,10 @@
 return {
+    { -- Autopairs
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true
+    },
+
     { -- Colorscheme
         "vague-theme/vague.nvim",
         config = function()
