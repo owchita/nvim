@@ -42,27 +42,6 @@ return {
         end
     },
 
-    { -- Treesitter
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-
-        config = function()
-            require ("nvim-treesitter").setup {
-                install_dir = vim.fn.stdpath('data') .. '/site'
-            }
-            require('nvim-treesitter').install { "c", "bash", "lua", "nix", "vim", "vimdoc", "python" }
-
-            -- Syntax highlighting
-            vim.api.nvim_create_autocmd('FileType', {
-                pattern = { "c", "bash", "nix", "py", "lua" },
-                callback = function() vim.treesitter.start() end,
-            })
-
-            -- Indentation
-            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-        end
-    },
-
     { -- Zen Mode
         "folke/zen-mode.nvim",
         vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
