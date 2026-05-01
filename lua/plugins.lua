@@ -57,6 +57,9 @@ return {
                 pattern = { "c", "bash", "nix", "py", "lua" },
                 callback = function() vim.treesitter.start() end,
             })
+
+            -- Indentation
+            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end
     },
 
