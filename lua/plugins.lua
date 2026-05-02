@@ -22,6 +22,10 @@ return {
         "numtostr/comment.nvim",
     },
 
+    { -- Gitsigns
+        "lewis6991/gitsigns.nvim",
+    },
+
     { -- Highlight colors
         "brenoprata10/nvim-highlight-colors",
 
@@ -40,6 +44,10 @@ return {
         opts = {
             theme = "vague",
         },
+    },
+
+    { -- nvim-lspconfig
+        "neovim/nvim-lspconfig",
     },
 
     { --Surround
@@ -61,6 +69,31 @@ return {
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
         end
+    },
+
+    { -- Treesitter
+        "nvim-treesitter/nvim-treesitter",
+
+        build = ":TSUpdate",
+    },
+
+    { -- Which Key
+        "folke/which-key.nvim",
+
+        event = "VeryLazy",
+
+        opts = {
+        },
+
+        keys = {
+            {
+                "<leader>?",
+                function()
+                    require("which-key").show({ global = false })
+                end,
+                desc = "Buffer Local Keymaps (which-key)",
+            },
+        },
     },
 
     { -- Zen Mode
