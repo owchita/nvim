@@ -30,5 +30,9 @@ vim.opt.splitright = true
 vim.opt.scrolloff = 5
 vim.opt.title = true
 
+-- Appearance
+vim.opt.bg = "dark"
+vim.cmd [[colorscheme habamax]]
+
 -- Clipboard
 vim.opt.clipboard = "unnamedplus"

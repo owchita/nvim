@@ -4,7 +4,6 @@ Simple neovim configuration.
 
 Included plugins:
 *   **Autopairs**: [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-*   **Catppuccin**: [catppuccin/nvim](https://github.com/catppuccin/nvim)
 *   **Comment**: [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)
 *   **Gitsigns**: [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 *   **Highlight colors**: [brenoprata10/nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)

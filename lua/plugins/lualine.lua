@@ -5,7 +5,11 @@ return { -- Lualine
         "nvim-tree/nvim-web-devicons",
     },
 
-    opts = {
-        theme = "vague",
-    },
+    config = function()
+        require("lualine").setup({
+            options = {
+                theme = "auto"
+            }
+        })
+    end
 }
