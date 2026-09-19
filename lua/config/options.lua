@@ -2,6 +2,7 @@
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.cmd("colorscheme kanagawa")
 
 -- Mouse
 vim.opt.mouse = ""
