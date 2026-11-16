@@ -1,8 +1,8 @@
 -- Appearance
 vim.opt.cursorline = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.cmd("colorscheme kanagawa")
+vim.cmd("set nonumber norelativenumber")
+vim.cmd("colorscheme kanagawa-dragon")
+vim.opt.laststatus = 0
 
 -- Mouse
 vim.opt.mouse = ""
